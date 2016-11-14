@@ -16,6 +16,7 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.os.Bundle;
@@ -26,7 +27,13 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.SwitchPreference;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import java.io.File;
+
+import org.cyanogenmod.internal.util.FileUtils;
 import org.cyanogenmod.internal.util.ScreenType;
 
 public class TouchscreenGestureSettings extends PreferenceActivity {
@@ -44,7 +51,8 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         if (ambientDisplayCat != null) {
             ambientDisplayCat.setEnabled(CMActionsSettings.isDozeEnabled(getContentResolver()));
         }
-
+        final ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mFlipPref = (SwitchPreference) findPreference("gesture_flip_to_mute");
         mFlipPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -74,6 +82,34 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
     }
 
     @Override
+    public void addPreferencesFromResource(int preferencesResId) {
+        super.addPreferencesFromResource(preferencesResId);
+        // Initialize node preferences
+        for (String pref : Constants.sBooleanNodePreferenceMap.keySet()) {
+            SwitchPreference b = (SwitchPreference) findPreference(pref);
+            if (b == null) continue;
+            b.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    String node = Constants.sBooleanNodePreferenceMap.get(preference.getKey());
+                    if (!TextUtils.isEmpty(node)) {
+                        Boolean value = (Boolean) newValue;
+                        FileUtils.writeLine(node, value ? "1" : "0");
+                        return true;
+                    }
+                    return false;
+                }
+            });
+            String node = Constants.sBooleanNodePreferenceMap.get(pref);
+            if (new File(node).exists()) {
+                String curNodeValue = FileUtils.readOneLine(node);
+                b.setChecked(curNodeValue.equals("1"));
+            } else {
+                b.setEnabled(false);
+            }
+        }
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
 
@@ -87,4 +123,12 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return false;
+    }
 }
