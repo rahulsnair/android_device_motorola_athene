@@ -4,6 +4,10 @@
     "target_path": "kernel/motorola/athene"
   },
   {
+    "repository": "android_external_stlport",
+    "target_path": "external/stlport"
+  }, 
+  {
     "repository": "android_external_bson",
     "target_path": "external/bson"
   },
