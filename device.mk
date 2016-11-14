@@ -65,6 +65,10 @@ PRODUCT_COPY_FILES += \
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 
+#Amaze File Manager
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/AmazeFileManager-v3.1.1-release.apk:system/priv-app/AmazeFileManager/AmazeFileManager.apk
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
