@@ -21,6 +21,10 @@ $(call inherit-product, device/motorola/athene/full_athene.mk)
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.rom.device=cm14g4
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := athene
 PRODUCT_NAME := cm_athene

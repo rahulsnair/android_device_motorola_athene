@@ -175,6 +175,10 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_soft_flacdec
 
+# OTA
+PRODUCT_PACKAGES += \
+    SlimOTA
+
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
