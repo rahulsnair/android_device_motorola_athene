@@ -127,6 +127,9 @@ ENABLE_CPUSETS := true
 # Properties
 TARGET_SYSTEM_PROP += device/motorola/athene/system.prop
 
+# Media
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
