@@ -136,6 +136,9 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
+#Enable peripheral manager
+TARGET_PER_MGR_ENABLED := true
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
