@@ -225,6 +225,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_wvm
+
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
