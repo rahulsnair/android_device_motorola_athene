@@ -1,0 +1,4 @@
+allow adbd pstorefs:dir search;
+allow adbd pstorefs:file { open read getattr };
+allow adbd media_rw_data_file:dir create_dir_perms;
+allow adbd media_rw_data_file:file create_file_perms;
