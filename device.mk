@@ -158,6 +158,9 @@ PRODUCT_COPY_FILES += \
 # OMS MASQUERADE
 PRODUCT_PACKAGES += \
    masquerade
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true
  
 # Media
 PRODUCT_COPY_FILES += \
