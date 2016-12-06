@@ -154,6 +154,10 @@ PRODUCT_PACKAGES += \
 # OEM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/oem/vhw.xml:system/etc/vhw.xml
+
+# OMS MASQUERADE
+PRODUCT_PACKAGES += \
+   masquerade
  
 # Media
 PRODUCT_COPY_FILES += \
