@@ -24,7 +24,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 # OTA
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rom.device=cm14g4
+    ro.rom.device=cm14g4oms
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := athene
