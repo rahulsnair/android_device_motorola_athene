@@ -375,4 +375,7 @@
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
+    <!-- enabling WifiDisplay(Miracast Source)-->
+    <bool name="config_enableWifiDisplay">true</bool>
+
 </resources>
