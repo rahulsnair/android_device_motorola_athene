@@ -372,4 +372,7 @@
          E.g. freeform, split-screen, picture-in-picture. -->
     <bool name="config_supportsMultiWindow">true</bool>
 
+    <!-- Boolean indicating if current platform supports BLE peripheral mode -->
+    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
+
 </resources>
