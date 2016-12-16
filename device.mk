@@ -229,10 +229,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshim_wvm
 
-# Stlport
-PRODUCT_PACKAGES += \
-    libstlport
-
 # Telephony-ext
 PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
