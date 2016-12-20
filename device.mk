@@ -25,6 +25,15 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Screen density
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_BOOTANIMATION_HALF_RES := true
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/bootanimation.zip:system/media/bootanimation.zip
+
+
 # Device was launched with M
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=23

@@ -17,11 +17,6 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 $(call inherit-product, device/motorola/athene/full_athene.mk)
 
-# Boot animation
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_BOOTANIMATION_HALF_RES := true
-
 # OTA
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rom.device=cm14g4oms
