@@ -1,27 +1,27 @@
 [
   {
-    "repository":  "android_kernel_motorola_msm8952",
+    "repository":  "kernel_motorola_msm8952",
     "target_path": "kernel/motorola/msm8952",
-	"branch":      "cm-14.1",
-	"remote":      "cm"
+	"branch":      "n7.1",
+	"remote":      "aoscp"
   },
   {
     "repository":  "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
-    "branch":      "cm-14.1",
-    "remote":      "tm"
+    "branch":      "n7.1",
+	"remote":      "aoscp"
   },
   {
-    "repository":  "android_external_bson",
+    "repository":  "external_bson",
     "target_path": "external/bson",
-	"branch":      "cm-13.0",
-	"remote":      "cm"
+	"branch":      "n7.1",
+	"remote":      "aoscp"
   },
   {
-    "repository":  "android_external_stlport",
+    "repository":  "external_stlport",
     "target_path": "external/stlport",
-	"branch":      "cm-14.1",
-	"remote":      "cm"
+	"branch":      "n7.1",
+	"remote":      "aoscp"
   },
   {
     "repository":  "android_packages_resources_devicesettings",
@@ -30,9 +30,9 @@
     "branch":      "cm-14.1"
   },
   {
-    "repository":  "android_device_qcom_common",
+    "repository":  "device_qcom_common",
     "target_path": "device/qcom/common",
-	"branch":      "cm-14.1",
-	"remote":      "cm"
+	"branch":      "n7.1",
+	"remote":      "aoscp"
   }
 ]
