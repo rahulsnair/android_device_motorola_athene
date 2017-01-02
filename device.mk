@@ -148,6 +148,10 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Enable Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.opa.eligible_device=true
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
