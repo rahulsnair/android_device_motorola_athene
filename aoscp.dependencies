@@ -24,10 +24,10 @@
 	"remote":      "aoscp"
   },
   {
-    "repository":  "android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings",
-    "remote":      "los",
-    "branch":      "cm-14.1"
+    "repository":  "packages_resources_Translato",
+    "target_path": "packages/resources/Translato",
+	"branch":      "n7.1",
+    "remote":      "aoscp"
   },
   {
     "repository":  "device_qcom_common",
