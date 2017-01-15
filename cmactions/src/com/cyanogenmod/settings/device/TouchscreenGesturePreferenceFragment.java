@@ -30,8 +30,7 @@ import android.text.TextUtils;
 
 import java.io.File;
 
-import org.cyanogenmod.internal.util.FileUtils;
-import org.cyanogenmod.internal.util.ScreenType;
+import com.cyanogenmod.settings.device.FileUtils;
 
 public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
