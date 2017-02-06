@@ -61,6 +61,7 @@ mdc_initial_max_retry=10
 persist.radio.sar_sensor=1
 persist.radio.call.audio.output=0
 ro.telephony.call_ring.multiple=false
+ro.product.model=Moto G4/G4 Plus
 
 # Display
 debug.sf.hw=1
