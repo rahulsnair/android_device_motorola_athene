@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    camera.msm8952 \
     libbson \
     Camero
 
