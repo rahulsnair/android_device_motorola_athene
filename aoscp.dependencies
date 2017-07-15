@@ -2,25 +2,25 @@
   {
     "repository":  "kernel_motorola_msm8952",
     "target_path": "kernel/motorola/msm8952",
-	"branch":      "nougat-mr1",
+	"branch":      "nougat-mr2",
 	"remote":      "aoscp"
   },
   {
     "repository":  "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
-    "branch":      "nougat-mr1",
+    "branch":      "nougat-mr2",
 	"remote":      "aoscp"
   },
   {
     "repository":  "external_bson",
     "target_path": "external/bson",
-	"branch":      "nougat-mr1",
+	"branch":      "nougat-mr2",
 	"remote":      "aoscp"
   },
   {
     "repository":  "external_stlport",
     "target_path": "external/stlport",
-	"branch":      "nougat-mr1",
+	"branch":      "nougat-mr2",
 	"remote":      "aoscp"
   },
   {
@@ -32,7 +32,7 @@
   {
     "repository":  "device_qcom_common",
     "target_path": "device/qcom/common",
-	"branch":      "nougat-mr1",
+	"branch":      "nougat-mr2",
 	"remote":      "aoscp"
   }
 ]
